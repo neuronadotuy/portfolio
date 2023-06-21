@@ -83,7 +83,7 @@ const MainDescription = () => {
 		<ShortDesc>
 		My expertise lies in crafting visually appealing and intuitive websites that provide seamless user experiences.
 		</ShortDesc>
-		<Navigation>
+		{/* <Navigation>
 			<NavItem>
 				<NavItemDecoration />
 				<NavLink>About</NavLink>
@@ -96,7 +96,7 @@ const MainDescription = () => {
 				<NavItemDecoration />
 				<NavLink>Projects</NavLink>
 			</NavItem>
-		</Navigation>
+		</Navigation> */}
 		</>
 	);
 }

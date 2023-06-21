@@ -15,7 +15,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   display: grid;
   gap: 48px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
 `
 
 const Static = styled.div`
@@ -45,6 +45,7 @@ function App() {
             company={'Globant'}
             companyWeb={'https://www.globant.com/'}
             desc={'Update of components based on business requirements and design, update project style and themes based on Design System, continue communication with design team regarding possible issues, accessibility and design fixes.'}
+            technologies={['React', 'JavaScript', 'TypeScript', 'StyledComponents', 'Sass', 'CSS3', 'HTML5']}
           />
         </Scrolleable>
       </Wrapper>

@@ -25,10 +25,12 @@ const DateContainer = styled.div`
 	}
 `
 
-const JobDescContainer = styled.div``
+const JobDescContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+`
 
 const PositionContainer = styled.div`
-position: relative;
 	display:flex;
 	align-items: flex-end;
 	gap: 12px;
@@ -49,6 +51,7 @@ const Position = styled.h3`
 `
 
 const Company = styled.a`
+	position: relative;
 	display: flex;
 	align-items: center;
 	gap: 4px;
@@ -76,8 +79,28 @@ const Desc = styled.p`
 	margin-top: 0;
 `
 
+const TechContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	column-gap: 12px;
+	row-gap: 6px;
+	padding-top: 18px;
+`
+
+const Tech = styled.p`
+	color: rgba(250, 250, 250);
+	background: rgba(250, 250, 250, .2);
+	font-size: 14px;
+	font-weight: 400;
+	padding: 6px 12px 8px 12px;
+	border-radius: 24px;
+	margin-bottom: 8px;
+	margin-top: 0;
+`
+
 // eslint-disable-next-line react/prop-types
-const Experience = ({ dateStart, dateEnd, position, company, companyWeb, desc }) => {
+const Experience = ({ dateStart, dateEnd, position, company, companyWeb, desc, technologies }) => {
 
 	const [companyLink, setCompanyLink] = useState(false)
 
@@ -101,6 +124,9 @@ const Experience = ({ dateStart, dateEnd, position, company, companyWeb, desc })
 						</Company>
 					</PositionContainer>
 					<Desc>{desc}</Desc>
+					<TechContainer>
+						{technologies.map(technology => <Tech>{technology}</Tech>)}
+					</TechContainer>
 				</JobDescContainer>
 			</ExperienceWrapper>
 		</ExperienceContainer>
